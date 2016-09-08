@@ -13,17 +13,18 @@ rivets-import iscapable of importing HTML code from files and inject in in the D
 again , performing appropiate Model binding.
 
 ###Main binders:
-rivets.binders['model']  -> Imports the JS file and binds the imported object to element (and childs)
-rivets.binders['view'] -> Imports the HTML file and renders inside the binded element.
+* rivets.binders['model']  -> Imports the JS file and binds the imported object to element (and childs)
+* rivets.binders['view'] -> Imports the HTML file and renders inside the binded element.
 
 ###Some extra binders and formaters are included in this library  :
-rivets.formatters.set -> allows assign a value to a variable
-rivets.binders['element'] -> for DOM element binding to a variable
+* rivets.formatters.set -> allows assign a value to a variable
+* rivets.binders['element'] -> for DOM element binding to a variable
 
 ###Utilities:
 
-rivets._.Util.resolveKeyPath => returns the Reference of the object represented in a string KeyPath
-rivets.configure_importer => Expects an object with one or all the following properties:
+* rivets._.Util.resolveKeyPath => returns the Reference of the object represented in a string KeyPath
+* rivets.configure_importer => Expects an object with one or all the following properties:
+```javascript
 {
   baseUrl : (string) base url for models directory
   baseUrl_Views : (string) base url for views directory
@@ -31,6 +32,7 @@ rivets.configure_importer => Expects an object with one or all the following pro
   debug : (boolean) : enabled and disabled the on-screen bindings visualization
   onLoadController : (function) function to be notified each time a Model is loaded
 }
+```
 
 ###Some notes:
 - SystemJS needs to be included manually (https://github.com/systemjs/systemjs)
