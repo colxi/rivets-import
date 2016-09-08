@@ -1,4 +1,4 @@
-# rivets-import
+# rivets-import (rv-model & rv-view)
 Experimental Set of Custom Binders for RivetsJS, to import ES6 modules, as Models... and HTML as Views.
 
 Requires:  [System.import](https://github.com/systemjs/systemjs)
@@ -10,10 +10,10 @@ Rivets-import is a set of custom Binders capable of importing ES6 modules
 as ViewModels, performing automatic binding to DOM elements, applying
 convenient inheritage, managing nesting, and automatic binding and unbinding routines.
 It should allowing to develope rivetJS based applications with a cleaner and better structured Model Architecture  and namespaces, where each model is independent one from each other.
-Rivets-import is also capable of importing HTML code from files and inject in in the DOM,
-again , performing appropiate Model binding.
+Rivets-import is also capable of importing HTML code from files and inject in in the DOM, again , performing appropiate Model binding.
+Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` behave in AngularJS (kind of rude and dirty implementation).
 
-###BUT DON'T FORGET: this is just an experiment... It' can produce memory leaks, inconsistent behavior under certain scenarios, and must be improved and tested, before consider it for a production enviroment. 
+###BUT DON'T FORGET: this is just an experiment... It' can produce memory leaks, inconsistent behavior under certain scenarios, and must be improved and tested, before considering its usage in a production enviroment. 
 
 ###Main binders:
 * rivets.binders['model']  -> Imports the JS file and binds the imported object to element (and childs)
