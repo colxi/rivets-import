@@ -1,0 +1,16 @@
+<div rv-model="'myModel'" style="padding:20px;">
+	<main>
+	    <h3>{globalModel.title} <sub>(globalModel.title)</sub></h3>
+	    <div><span rv-text="myModel.about">***</span> <sub>(myModel.about)</sub></div>
+	    <div><span rv-text="myModel.consideration">***</span> <sub>(myModel.consideration)</sub></div>
+	    <br>
+	    <input type="button" rv-on-click="myModel.warn" value="Click to launch Alert ( myModel.warn() )" >
+	    <input type="button" rv-on-click="myModel.toggleDebug" value="Click to toggleDebug ( myModel.toggleDebug() )" >
+	    <p>
+	    	<b>Rivets-import</b>
+	    	<br>
+	    	<span>Library by <a rv-href="myModel.author.web" target="_blank">{myModel.author.name} [{myModel.author.web}]</a> - {myModel.author.email}</span>
+	    	<span>https://github.com/colxi/rivets-import</span>
+	    </p>
+    </main>
+</div>

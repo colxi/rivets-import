@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<script src="./lib/systemjs/system.js"></script>
+		<script src="./lib/sightglass/index.js"></script>
+		<script src="./lib/rivets/rivets.js"></script>
+		<script src="./rivets-import-view-model.js"></script>
+		<script>
+			window.onload = function(){
+				// configure SystemJS
+				System.config({ baseURL: './' });
+				// configure RivetsJS
+				rivets.configure({
+					prefix: 'rv', 					// Attribute prefix in templates
+					preloadData: true,				// Preload templates with initial data on bind
+					rootInterface: '.',				// Root sightglass interface for keypaths
+					templateDelimiters: ['{', '}'],	// Template delimiters for text bindings
+				});
+				// configure Sightglass
+				sightglass.adapters = rivets.adapters;
+				sightglass.root 	= rivets.rootInterface;
+				// configure Rivets Importer
+				rivets.configure_importer({
+					debug : true
+				});
+
+				// bind body to allow rivets parse tags
+				rivets.bind( document.body,{} );
+			};
+		</script>
+	</head>
+	<body rv-model="'globalModel'">
+		<div rv-view="'myView'">**Imported View goes here**</div>
+	</body>
+</html>
