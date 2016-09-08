@@ -6,12 +6,10 @@ Requires:  [System.import](https://github.com/systemjs/systemjs)
 Experimental RIVETS-IMPORT Binders v.0.0.12
 by Colxi - www.colxi.info
 
-Rivets-import is a set of custom Binders capable of importing ES6 modules
-as ViewModels, performing automatic binding to DOM elements, applying
-convenient inheritage, managing nesting, and automatic binding and unbinding routines.
-It should allowing to develope rivetJS based applications with a cleaner and better structured Model Architecture  and namespaces, where each model is independent one from each other.
-Rivets-import is also capable of importing HTML code from files and inject in in the DOM, again , performing appropiate Model binding.
-Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` behave in AngularJS (kind of rude and dirty implementation).
+Rivets-import is a set of custom Binders capable of importing ES6 modules as ViewModels, performing automatic binding to DOM elements, applying convenient inheritage, managing nesting, and automatic binding and unbinding routines.
+It should allow to develope rivetsJS based applications with a cleaner and better structured Model files Architecture and namespaces, where each model code is isolated from the others in its own file, improving the maintainability of the applications.
+Rivets-import is also capable of importing HTML code from .html files and inject in in the DOM, again , performing appropiate Model binding.
+Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` do behave in AngularJS.
 
 ###BUT DON'T FORGET: this is just an experiment... It' can produce memory leaks, inconsistent behavior under certain scenarios, and must be improved and tested, before considering its usage in a production enviroment. 
 
@@ -45,6 +43,7 @@ Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` behave in
 - Debug mode (enable it via config) allows bindings and nested bindings visualization on elements
 - By default models should be placed in ./models/ and vies in ./views/ (configurable)
 - Models Structure needs to be implemented using an Object Pattern , and exports must be using the export default mode.
+- You will find a rude implementation and confusing structures on the code. It was my first aproximation to RivetsJS, and the main objective here has always been make it functional, not elegant. 
 
 ###Examples:
 - You will find a simple example in the DEMO directory
