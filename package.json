@@ -1,12 +1,19 @@
 {
-	"name": "rivets-import",
-	"description " : "Experimental Set of Custom Binders for RivetsJS, to import ES6 modules, as Models (rv-model)... and HTML as Views (rv-view).",
-	"version": "0.0.12",
-	"keywords": ["rivets", "rivetsjs", "import modules", "rivets models", "rivets views", "import model"],
-	"author": "colxi",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/colxi/rivets-import.git"
-	}
+  "name": "rivets-import",
+  "description ": "Experimental Set of Custom Binders for RivetsJS, to import ES6 modules, as Models (rv-model)... and HTML as Views (rv-view).",
+  "version": "0.0.13",
+  "keywords": [
+    "rivets",
+    "rivetsjs",
+    "import modules",
+    "rivets models",
+    "rivets views",
+    "import model"
+  ],
+  "author": "colxi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colxi/rivets-import.git"
+  }
 }
