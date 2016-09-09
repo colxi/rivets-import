@@ -305,7 +305,6 @@ rivets.binders['model'] = {
             }
         }
         console.log( '%c rv-model ' + modelName + ' : ROUTINE' , 'color: orange' );
-
         el.firstChild.setAttribute( 'rv:model' , modelName );
         el.firstChild.setAttribute( 'rv:model::scopes' , modelName);
 
@@ -326,7 +325,7 @@ rivets.binders['model'] = {
                 _bind(el, modelName, initialize);
             });
         }else{
-            console.log('rv-model : The model '+modelName+' is already loaded. Using active Instance');
+            console.log('rv-model : The model "'+modelName+'" is cached. Using cache');
             _bind( el, modelName , false); // already loaded, bind but not run constructor
         }
         // INTERNAL WRAPPER BINDER
@@ -341,6 +340,7 @@ rivets.binders['model'] = {
             }
 
             function _constructed(){
+                if(!modelName) return false; // patch, to prevent error caused when no model name is attached
                 delete rivets.imports[modelName][rivets.imports.__constructor__]; // ensure one time execution
                 if(typeof rivets.imports.__onLoadController__ === 'function') rivets.imports.__onLoadController__(modelName);
 
