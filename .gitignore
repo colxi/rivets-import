@@ -1,1 +1,12 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Sublime
+/*.sublime-workspace
+/*.sublime-project
+
+#Common
 /node_modules
+/npm-debug.log
+

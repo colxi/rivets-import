@@ -1,9 +1,10 @@
 # rivets-import (rv-model & rv-view)
 Experimental Set of Custom Binders for RivetsJS, to import ES6 modules, as Models... and HTML as Views.
 
-Requires:  [System.import](https://github.com/systemjs/systemjs)
+- Dependencies: [System.import](https://github.com/systemjs/systemjs)
+- Installation: npm install rivets-import
 
-Experimental RIVETS-IMPORT Binders v.0.0.12
+Experimental RIVETS-IMPORT Binders
 by Colxi - www.colxi.info
 
 Rivets-import is a set of custom Binders capable of importing ES6 modules as ViewModels, performing automatic binding to DOM elements, applying convenient inheritage, managing nesting, and automatic binding and unbinding routines.
@@ -11,7 +12,7 @@ It should allow to develope rivetsJS based applications with a cleaner and bette
 Rivets-import is also capable of importing HTML code from .html files and inject in in the DOM, again , performing appropiate Model binding.
 Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` do behave in AngularJS.
 
-###BUT DON'T FORGET: this is just an experiment... It' can produce memory leaks, inconsistent behavior under certain scenarios, and must be improved and tested, before considering its usage in a production enviroment. 
+###BUT DON'T FORGET: this is just an experiment... It' can produce memory leaks, inconsistent behavior under certain scenarios, and must be improved and tested, before considering its usage in a production enviroment.
 
 ###Main binders:
 * rivets.binders['model']  -> Imports the JS file and binds the imported object to element (and childs)
@@ -43,7 +44,7 @@ Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` do behave
 - Debug mode (enable it via config) allows bindings and nested bindings visualization on elements
 - By default models should be placed in ./models/ and vies in ./views/ (configurable)
 - Models Structure needs to be implemented using an Object Pattern , and exports must be using the export default mode.
-- You will find a rude implementation and confusing structures on the code. It was my first aproximation to RivetsJS, and the main objective here has always been make it functional, not elegant. 
+- You will find a rude implementation and confusing structures on the code. It was my first aproximation to RivetsJS, and the main objective here has always been make it functional, not elegant.
 
 ###Examples:
 - You will find a simple example in the DEMO directory

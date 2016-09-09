@@ -1,29 +1,20 @@
 <html>
 	<head>
+		<!-- SystemJS performs ES6 module import -->
 		<script src="./lib/systemjs/system.js"></script>
+		<!--  Sightglass is a dependency of Rivets -->
 		<script src="./lib/sightglass/index.js"></script>
+		<!--  Rivets main library -->
 		<script src="./lib/rivets/rivets.js"></script>
+		<!--  Rivets importer library -->
 		<script src="./rivets-import.js"></script>
-		<script>
-			window.onload = function(){
-				// configure SystemJS
-				System.config({ baseURL: './' });
-				// configure RivetsJS
-				rivets.configure({
-					prefix: 'rv', 					// Attribute prefix in templates
-					preloadData: true,				// Preload templates with initial data on bind
-					rootInterface: '.',				// Root sightglass interface for keypaths
-					templateDelimiters: ['{', '}'],	// Template delimiters for text bindings
-				});
-				// configure Sightglass
-				sightglass.adapters = rivets.adapters;
-				sightglass.root 	= rivets.rootInterface;
-				// bind body to allow rivets parse tags
-				rivets.bind( document.body,{} );
-			};
-		</script>
+		<!--  Libraries configuration -->
+		<script src="./index.js"></script>
+		<!--  Some required styles -->
+    	<link href="index.css" rel="stylesheet" type="text/css">
 	</head>
-	<body rv-model="'globalModel'">
-		<div rv-view="'myView'">**Imported View goes here**</div>
+	<!--  Binding body to the view found in"./views/globalView.html" -->
+	<body rv-view="'globalView'">
+		** You should not view this text **
 	</body>
 </html>

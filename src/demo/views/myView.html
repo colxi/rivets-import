@@ -1,17 +1,27 @@
-<div rv-model="'myModel'" style="padding:20px;">
+<!-- The string contained in "globalModel.currentModel" will be used as a Model Name ,
+and when setted , rivets-import will launch Model load and binding. When rivets-import detects
+Model nesting, or parent elements with model bindings (generated via rv-model), it will bind
+the element also to all the parent Models. You can appreciate it in the FOOTER block -->
+<div rv-model="globalModel.currentModel" class="padded">
 	<main>
-	    <h3>{globalModel.title} <sub>(globalModel.title)</sub></h3>
-	    <div><span rv-text="myModel.about">***</span> <sub>(myModel.about)</sub></div>
-	    <div><span rv-text="myModel.consideration">***</span> <sub>(myModel.consideration)</sub></div>
+	    <div><span rv-text="myModel.description">***</span> <sub>(&crarr; myModel.description)</sub></div>
+	    <div><span rv-text="myModel.consideration">***</span> <sub>(&crarr; myModel.consideration)</sub></div>
 	    <br>
-	    <input type="button" rv-on-click="myModel.warn" value="Click to launch Alert"> <sub>( myModel.warn() )</sub>
-	    <input type="button" rv-on-click="myModel.toggleDebug" value="Click to toggleDebug"> <sub>( myModel.toggleDebug() )</sub>
-	    <p>
-	    	<b>Rivets-import</b>
-	    	<br>
-	    	<span>Library by <a rv-href="myModel.author.web" target="_blank">{myModel.author.name} [{myModel.author.web}]</a> - {myModel.author.email}</span>
-	    	<br>
-	    	<a href="https://github.com/colxi/rivets-import">https://github.com/colxi/rivets-import</a>
-	    </p>
+	    <input type="button" rv-enabled="myModel" rv-on-click="myModel.warn" value="Click to read WARN"> <sub>(&crarr; myModel.warn() )</sub>
+	    <!-- The usage of rivets-import debug mode, is specially useful to visualize Model binding inheritage -->
+	    <input type="button" rv-enabled="myModel" rv-on-click="myModel.toggleDebug" value="Click to toggle DEBUG mode"> <sub>(&crarr; myModel.toggleDebug() )</sub>
+	    <footer>
+		    <p class="padding inverted">
+		    	<b>Rivets-import</b>
+		    	<br>
+		    	<!-- Model NESTING DEMO : "globalModel" properties can be accesed from this nested view (and model), -->
+		    	<!-- because of the Model parents hyperarchy detection, performed automatically by rivets-import. -->
+		    	<span>Library by <a rv-href="globalModel.about.web" target="_blank">{globalModel.about.author}</a> <sub>(&crarr; globalModel.about.author)</sub></span>
+		    	<br>
+		    	<span>{globalModel.about.installation} <sub>(&crarr; globalModel.about.author)</sub></span>
+		    	<br>
+		    	<a href="https://github.com/colxi/rivets-import">https://github.com/colxi/rivets-import</a>
+		    </p>
+	    </footer>
     </main>
 </div>
