@@ -3,7 +3,7 @@
 		<script src="./lib/systemjs/system.js"></script>
 		<script src="./lib/sightglass/index.js"></script>
 		<script src="./lib/rivets/rivets.js"></script>
-		<script src="./rivets-import-view-model.js"></script>
+		<script src="./rivets-import.js"></script>
 		<script>
 			window.onload = function(){
 				// configure SystemJS
@@ -18,11 +18,6 @@
 				// configure Sightglass
 				sightglass.adapters = rivets.adapters;
 				sightglass.root 	= rivets.rootInterface;
-				// configure Rivets Importer
-				rivets.configure_importer({
-					debug : true
-				});
-
 				// bind body to allow rivets parse tags
 				rivets.bind( document.body,{} );
 			};
