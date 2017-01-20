@@ -31,7 +31,7 @@ Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` do behave
   baseUrl : (string) base url for models directory
   baseUrl_Views : (string) base url for views directory
   constructor : (string) name of the custom Module constructor
-  debug : (boolean) : enabled and disabled the on-screen bindings visualization
+  debug : (boolean) : enabled and disabled the on-screen bindings visualization and console debugging
   onLoadController : (function) function to be notified each time a Model is loaded
 }
 ```
@@ -39,12 +39,12 @@ Rivets-import aims to behave like  ```ng-controller``` & ```ng-view``` do behave
 ###Some notes:
 - SystemJS needs to be included manually (https://github.com/systemjs/systemjs)
 - Views must use .html extewnsion
-- Imported Models are stored in rivets.imports.
+- Imported Models are stored in rivets.imports{}
 - Custom Model Constructor can be set via config, it will be executed only in first import.
 - Debug mode (enable it via config) allows bindings and nested bindings visualization on elements
 - By default models should be placed in ./models/ and vies in ./views/ (configurable)
 - Models Structure needs to be implemented using an Object Pattern , and exports must be using the export default mode.
-- You will find a rude implementation and confusing structures on the code. It was my first aproximation to RivetsJS, and the main objective here has always been make it functional, not elegant.
+- You will find a rude implementation and confusing structures on the source code. It was my first aproximation to RivetsJS, and the main objective here has always been make it functional, not elegant.
 
 ###Examples:
 - You will find a simple example in the DEMO directory

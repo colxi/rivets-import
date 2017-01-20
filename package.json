@@ -1,7 +1,7 @@
 {
   "name": "rivets-import",
   "description ": "Experimental Set of Custom Binders for RivetsJS, to import ES6 modules, as Models (rv-model)... and HTML as Views (rv-view).",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "keywords": [
     "rivets",
     "rivetsjs",
